@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lexend Deca", serif;
+  font-optical-sizing: auto;
+  color: rgba(255, 255, 255, 0.89);
+  background-color: gray;
+  /* background: url("https://images.unsplash.com/photo-1484766280341-87861644c80d?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.weather-app {
+  background: linear-gradient(
+    to bottom,
+    rgba(107, 209, 192, 0.493),
+    90%,
+    rgba(128, 0, 128, 0.459)
+  );
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 300px;
+  backdrop-filter: blur(3px);
+}
+.weather-data #temperature {
+  font-size: 40px;
+  font-weight: 500;
+}
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+}
+.form-container #search-box {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 2rem;
+  margin-right: 1rem;
+  color: gray;
+}
+.form-container #search-box:focus {
+  outline: none;
+}
+.form-container #search-button {
+  padding: 0.5rem 0.6rem;
+  border-radius: 50%;
+  border: none;
+}
+.form-container #search-button img {
+  height: 15px;
+  width: 15px;
+}
+.weather-data-container .weather-data .weather-image {
+  height: 70px;
+  width: 70px;
+  margin-bottom: 1rem;
+}
+.weather-data-container {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+.weather-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.weather-data h2 {
+  padding-top: 0.2rem;
+  font-size: 16px;
+  font-weight: 100;
+}
+.weather-details-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1;
+}
+.weather-details img {
+  width: 50px;
+  height: 50px;
+}
+.weather-details h3 {
+  font-size: 15px;
+}
+.weather-details .wind-image {
+  transform: rotate(90deg);
+}
+.weather-details p {
+  font-size: 10px;
+}
+.weather-details {
+  display: flex;
+}
+.error-message {
+  position: absolute;
+  bottom: 0;
+  left: 12px;
+  color: rgb(241, 236, 237);
+  font-size: 12px;
+  font-weight: bold;
+  transform: translateY(15px);
+  display: none;
+}
+.weather-details-container,
+.weather-data-container {
+  display: none;
+}
+
+/* @media (max-width: 300px) {
+  body {
+    background-size: cover;
+    background-position: center;
+  }
+  .weather-app {
+    width: 100%;
+    padding: 1rem;
+  }
+} */
+@media (max-width: 400px) {
+  body {
+    background-size: cover;
+    background-position: center;
+  }
+  .weather-app {
+    width: 99%;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    border-radius: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    backdrop-filter: blur(2px);
+  }
+  .weather-data-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0;
+  }
+  .weather-data #temperature {
+    font-size: 4rem;
+    font-weight: 400;
+  }
+  #location {
+    font-size: 26px;
+  }
+  .weather-data-container .weather-data .weather-image {
+    width: 120px;
+    height: 120px;
+  }
+  .form-container {
+    width: 100%;
+  }
+  .form-container #search-box {
+    padding: 1rem;
+    width: 95%;
+    margin-right: 5px;
+  }
+  .form-container #search-button {
+    padding: 1rem;
+    /* margin-left: 5px; */
+  }
+  .weather-details-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+  }
+  .weather-details p {
+    font-size: 1rem;
+    font-weight: 150;
+    letter-spacing: 1px;
+  }
+  .weather-details h3 {
+    font-size: 1.2rem;
+  }
+  .weather-details-container,
+  .weather-data-container {
+    display: none;
+  }
+}
+@media (max-width: 278px) {
+  body {
+    background-size: cover;
+    background-position: center;
+  }
+  .weather-details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .one {
+    margin-bottom: 2rem;
+  }
+  .weather-details-container,
+  .weather-data-container {
+    display: none;
+  }
+}
